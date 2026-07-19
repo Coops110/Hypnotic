@@ -494,6 +494,7 @@
     <h2 class="title" style="text-align:center;" data-i18n="booking_title">Book a table</h2>
     <div data-reveal class="booking-box">
       <form id="bookingForm">
+        <input type="checkbox" name="botcheck" id="botcheck" style="display:none;" tabindex="-1" autocomplete="off">
         <div class="form-row">
           <div><label for="name" data-i18n="f_name">Name</label><input id="name" required></div>
           <div><label for="phone" data-i18n="f_phone">Phone</label><input id="phone"></div>
@@ -754,7 +755,8 @@
       email: email,
       date: date,
       guests: guests,
-      notes: notes
+      notes: notes,
+      botcheck: document.getElementById('botcheck').checked
     };
 
     statusEl.textContent = 'Sending\u2026';
